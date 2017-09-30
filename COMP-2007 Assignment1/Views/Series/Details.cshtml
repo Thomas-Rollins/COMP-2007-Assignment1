@@ -5,26 +5,25 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Details</h2>
+<h2>@Html.DisplayFor(model => model.SeriesName)  Details</h2>
 
 <div>
-    <h4>Series</h4>
     <hr />
+    <img src=@Html.DisplayFor(model => model.CoverArtURL) />
     <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Genre1.GenreName)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Genre1.GenreName)
-        </dd>
-
         <dt>
             @Html.DisplayNameFor(model => model.SeriesName)
         </dt>
 
         <dd>
             @Html.DisplayFor(model => model.SeriesName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Genre1.GenreName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Genre1.GenreName)
         </dd>
 
         <dt>
@@ -68,6 +67,7 @@
         </dd>*@
 
     </dl>
+    
 </div>
 <p>
     @Html.ActionLink("Edit", "Edit", new { id = Model.SeriesID }) |
