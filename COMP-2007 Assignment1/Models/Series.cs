@@ -14,17 +14,20 @@ namespace COMP_2007_Assignment1.Controllers
         [StringLength(128)]
         public string SeriesName { get; set; }
 
+        [DataType(DataType.MultilineText)]
         public string Synopsis { get; set; }
 
         [Column(TypeName = "date")]
+        [DataType(DataType.Date)]
         public DateTime? RunStartDate { get; set; }
 
         [StringLength(1024)]
         public string Producer { get; set; }
 
+        [Range(0, 10)] // Restricts value to 0-10 for form validation
         public decimal? Raiting { get; set; }
 
-        [StringLength(1024)]
+        [DataType(DataType.ImageUrl)]
         public string CoverArtURL { get; set; }
 
         public int Genre { get; set; }

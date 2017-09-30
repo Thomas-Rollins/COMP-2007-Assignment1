@@ -17,7 +17,10 @@ namespace COMP_2007_Assignment1.Models
         // GET: Genres
         public ActionResult Index()
         {
-            return View(db.Genres.ToList());
+            var genres = from g in db.Genres
+                         orderby g.GenreName ascending
+                         select g;
+            return View(genres);
         }
 
         // GET: Genres/Details/5
