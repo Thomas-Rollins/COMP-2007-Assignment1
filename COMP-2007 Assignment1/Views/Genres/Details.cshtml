@@ -30,6 +30,6 @@
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.GenreID }) |
-    @Html.ActionLink("Back to List", "Index")
+    <button type="button" class="btn btn-warning">@Html.ActionLink("Edit", "Edit", new { id = Model.GenreID })</button>
+        <button type="button" class="btn btn-default">@Html.ActionLink("Back to List", "Index")</button>
 </p>
