@@ -19,8 +19,10 @@ namespace COMP_2007_Assignment1.Controllers
 
         [Required]
         [StringLength(50)]
+        [Display(Name = "Genre")]
         public string GenreName { get; set; }
 
+        [Display(Name = "Description")]
         public string GenreDescription { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

@@ -8,18 +8,18 @@
 <h2>Index</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    <button type="button" class="btn btn-success">@Html.ActionLink("Create New", "Create")</button>
 </p>
-<table class="table">
+<table class="table table-hover">
     <tr>
         <th>
-            Series Title
+           @Html.DisplayNameFor(model => model.SeriesName)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Genre)
         </th>
         <th>
-            Starting Date
+            @Html.DisplayNameFor(model => model.RunStartDate)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Producer)
@@ -48,9 +48,9 @@
             @Html.DisplayFor(modelItem => item.Raiting)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.SeriesID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.SeriesID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.SeriesID })
+            <button type="button" class="btn btn-warning">@Html.ActionLink("Edit", "Edit", new { id = item.SeriesID })</button>
+            <button type="button" class="btn btn-info">@Html.ActionLink("Details", "Details", new { id = item.SeriesID })</button>
+            <button type="button" class="btn btn-danger">@Html.ActionLink("Delete", "Delete", new { id = item.SeriesID })</button>
         </td>
     </tr>
 }

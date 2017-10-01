@@ -12,6 +12,7 @@ namespace COMP_2007_Assignment1.Controllers
 
         [Required]
         [StringLength(128)]
+        [Display(Name ="Series Title")]
         public string SeriesName { get; set; }
 
         [DataType(DataType.MultilineText)]
@@ -19,6 +20,7 @@ namespace COMP_2007_Assignment1.Controllers
 
         [Column(TypeName = "date")]
         [DataType(DataType.Date)]
+        [Display(Name = "Starting Date")]
         public DateTime? RunStartDate { get; set; }
 
         [StringLength(1024)]

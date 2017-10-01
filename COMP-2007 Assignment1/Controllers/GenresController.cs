@@ -23,6 +23,7 @@ namespace COMP_2007_Assignment1.Models
             return View(genres);
         }
 
+
         // GET: Genres/Details/5
         public ActionResult Details(int? id)
         {
@@ -117,6 +118,7 @@ namespace COMP_2007_Assignment1.Models
             db.SaveChanges();
             return RedirectToAction("Index");
         }
+
 
         protected override void Dispose(bool disposing)
         {

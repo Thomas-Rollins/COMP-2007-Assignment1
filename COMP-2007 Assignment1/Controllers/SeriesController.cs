@@ -36,6 +36,22 @@ namespace COMP_2007_Assignment1.Models
             return View(series);
         }
 
+        // GET: Series/Browse/5
+        public ActionResult Browse(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            //Series series = db.Series.Find(id);
+            var series = from s in db.Series
+                         where s.Genre == id
+                         orderby s.SeriesName ascending
+                         select s;
+            ViewBag.Genre = id;
+            return View(series);
+        }
+
         // GET: Series/Create
         public ActionResult Create()
         {
