@@ -22,6 +22,7 @@ namespace COMP_2007_Assignment1.Controllers
         [Display(Name = "Genre")]
         public string GenreName { get; set; }
 
+        [DataType(DataType.MultilineText)]
         [Display(Name = "Description")]
         public string GenreDescription { get; set; }
 
